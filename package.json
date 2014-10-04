@@ -1,23 +1,31 @@
 {
-    "name": "gulp-mu2",
-    "version": "0.0.1",
-    "description": "A plugin for Gulp that renders mustache templates into html using http://github.com/raycmorgan/Mu"
-    "keywords": [
-        "gulpplugin",
-        "gulp",
-        "mustache",
-        "raycmorgan"
-    ],
-    "homepage": "https://github.com/SjB/gulp-mu2",
-    "bugs": "https://github.com/SjB/gulp-mu2/issues",
-    "author": {
-        "name": "Steve Beaulac",
-        "email": "steve.beaulac@gmail.com",
-        "url": "https://github.com/SjB/gulp-mu2.git"
-    },
-    "licenses": [
-        {
-            "type": "MIT"
-        }
-    ]
+  "name": "gulp-mu2",
+  "version": "0.0.1",
+  "description": "A plugin for Gulp that renders mustache templates into html using http://github.com/raycmorgan/Mu",
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "mustache",
+    "raycmorgan"
+  ],
+  "homepage": "https://github.com/SjB/gulp-mu2",
+  "bugs": "https://github.com/SjB/gulp-mu2/issues",
+  "author": {
+    "name": "Steve Beaulac",
+    "email": "steve.beaulac@gmail.com",
+    "url": "https://github.com/SjB/gulp-mu2.git"
+  },
+  "dependencies": {
+    "mu2": "~0.5.20",
+    "lodash": "~2.4.1",
+    "through2": "~0.6.2",
+    "gulp-util": "~3.0.1"
+  },
+  "devDependencies": {
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
 }
