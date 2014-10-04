@@ -42,7 +42,7 @@ module.exports = function(view, options) {
 			console.log(e.toString());
 		}
 
-		if (options.tpldir) {
+		if (options.root) {
 			mu.root = options.root;
 		} else {
 			mu.root = file.base;
