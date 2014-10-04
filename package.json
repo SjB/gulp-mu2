@@ -15,6 +15,11 @@
     "email": "steve.beaulac@gmail.com",
     "url": "https://github.com/SjB/gulp-mu2.git"
   },
+  "main": "./index.js",
+  "repository": {
+      "type": "git",
+      "url": "git://github.com/SjB/gulp-mu2.git"
+  },
   "dependencies": {
     "mu2": "~0.5.20",
     "lodash": "~2.4.1",
