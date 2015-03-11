@@ -3,6 +3,7 @@
 var through2 = require('through2'),
 	gutil = require('gulp-util'),
 	mu = require('mu2'),
+	path = require('path'),
 	fs = require('fs'),
 	_ = require('lodash');
 
@@ -37,7 +38,10 @@ module.exports = function(view, options) {
 		if (viewError) {
 			this.emit('error', new gutil.PluginError('glup-mu2', viewError.toString()));
 		}
-		var data = _.extend({}, view);
+		var page = path.basename(file.path, '.html');
+		var data = {};
+		data['pg-'+page] = true;
+		data = _.extend(data, view);
 		try {
 			var datafile = gutil.replaceExtension(file.path, '.json');
 			if (fs.existsSync(datafile)) {
