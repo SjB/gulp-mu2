@@ -11,9 +11,14 @@ module.exports = function(view, options) {
 
 	var viewError = null;
 
+	var parse = function(filename) {
+		var js = fs.readFileSync(filename, 'utf8');
+		return eval('(' + js + ')');
+	}
+
 	if (typeof view === 'string') {
 		try {
-			view = JSON.parse(fs.readFileSync(view, 'utf8'));
+			view = parse(view);
 		} catch (e) {
 			viewError = e;
 		}
@@ -36,7 +41,7 @@ module.exports = function(view, options) {
 		try {
 			var datafile = gutil.replaceExtension(file.path, '.json');
 			if (fs.existsSync(datafile)) {
-				data = _.extend(data, JSON.parse(fs.readFileSync(datafile, 'utf8')));
+				data = _.extend(data, parse(datafile));
 			}
 		} catch (e) {
 			console.log(e.toString());
