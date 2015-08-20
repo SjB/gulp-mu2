@@ -77,9 +77,9 @@ module.exports = function(view, options) {
 						})
 						.on('end', function() {
 							file.contents = new Buffer(html);
-                            if (typeof options.extension === 'string') {
-                                file.path = gutil.replaceExtension(file.path, options.extension);
-                            }
+							if (typeof options.extension === 'string') {
+								file.path = gutil.replaceExtension(file.path, options.extension);
+							}
 							stream.push(file);
 							callback();
 						});
@@ -89,4 +89,3 @@ module.exports = function(view, options) {
 		});
 	});
 };
-
