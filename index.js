@@ -21,7 +21,7 @@ module.exports = function(view, options) {
 		try {
 			view = parse(view);
 		} catch (e) {
-			view = eval('(' + fs.readFileSync(view, 'utf8')) + ')');
+			view = eval('(' + fs.readFileSync(view, 'utf8') + ')');
 		}
 	}
 
